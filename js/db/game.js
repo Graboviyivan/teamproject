@@ -19,10 +19,10 @@ export const gameDb = [
     },
         {
         title: 'Grand Theft Auto IV',
-        info: `Grand Theft Auto IV - `,
+        info: `Grand Theft Auto IV - - комп'ютерна гра в жанрі action-adventure , одинадцята в серії Grand Theft Auto , випущена 29 квітня 2008 для двох ігрових приставок  - PlayStation 3 і Xbox 360 , також через піврокупортувалина ПК . Компанія Rockstar Games випустила доповнення до гри, поширюючи їх через інтернет-сервіси Xbox Live , Games for Windows - Live , PlayStation Network та у складі дискового видання Grand Theft Auto: Episodes from Liberty City ; у цих доповненнях під керуванням гравця знаходяться нові герої, і сюжети доповнень відбуваються паралельно до сюжету основної гри.`,
         img: `https://upload.wikimedia.org/wikipedia/ru/d/dd/Grand_Theft_Auto_IV.jpg`,
         walkthrough: `https://youtu.be/O3QBb6GeDsY?si=binezV3tuK-ZIDKQ`,
     },
 ]
 
-console.log(gameDb[0].title)
+console.log(gameDb[1])
