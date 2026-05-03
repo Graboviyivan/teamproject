@@ -1,0 +1,67 @@
+/* Загальні стилі для сторінки */
+body {
+  background-color: #111;
+  font-family: Arial, sans-serif;
+  color: #eee;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Стилі для секцій */
+section {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+/* Заголовок форми */
+h2 {
+  text-align: center;
+  color: #00ff99;
+  margin-bottom: 15px;
+}
+
+/* Форма */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Поле вводу */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #00ff99;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Кнопка */
+button {
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00ff99;
+  color: #000;
+}
+
+/* Секція результатів пошуку */
+#game-search-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  color: #fff;
+}
