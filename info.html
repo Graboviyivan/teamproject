@@ -27,14 +27,24 @@
     <section>
         <h2>Пошук інформації про ігри</h2>
         <form>
-            <label for="username">Назва гри</label><br>
-            <input type="text" id="game-search-input" name="username" placeholder="Введіть назву (наприклад, GTA V)"><br><br>
+            <label for="game-search-input">Назва гри</label><br>
+            <input type="text" id="game-search-input" name="username" list="games-list" placeholder="Введіть назву (наприклад, GTA V)">
+            <datalist id="games-list">
+            <option value="Grand Theft Auto VI">
+            <option value="Grand Theft Auto V">
+            <option value="Red Dead Redemption 2">
+            <option value="Red Dead Redemption">
+            <option value="Bully">
+            <option value="Max Payne 3">
+            <option value="L.A. Noire">
+            <option value="Manhunt">
+        </datalist>
+            <br><br>
             <button id="game-search-btn">Знайти інфо</button>
         </form>
     </section>
     
     <section id="game-search-section">
-        <!-- Сюди твій JS буде виводити результат -->
     </section>
 </main>
 
