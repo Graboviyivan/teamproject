@@ -1,4 +1,3 @@
-/* Загальні стилі для сторінки */
 body {
   background-color: #111;
   font-family: Arial, sans-serif;
@@ -7,7 +6,6 @@ body {
   padding: 20px;
 }
 
-/* Стилі для секцій */
 section {
   margin: 20px auto;
   padding: 20px;
@@ -16,21 +14,18 @@ section {
   max-width: 400px;
 }
 
-/* Заголовок форми */
 h2 {
   text-align: center;
   color: #00ff99;
   margin-bottom: 15px;
 }
 
-/* Форма */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Поле вводу */
 input[type="text"] {
   width: 80%;
   padding: 10px;
@@ -41,7 +36,6 @@ input[type="text"] {
   color: #fff;
 }
 
-/* Кнопка */
 button {
   background-color: #ff0000;
   color: #fff;
@@ -57,7 +51,6 @@ button:hover {
   color: #000;
 }
 
-/* Секція результатів пошуку */
 #game-search-section {
   margin-top: 30px;
   padding: 20px;

@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/info.css">
+    <title>Rockstar Games | Про ігри</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/info.css">
 </head>
 <body>
-<section>
-    <h2 >Форма входу</h2>
-    <form>
-        <label for="username">Нава гри</label><br>
-        <input type="text" id="game-search-input" name="username" placeholder="Введіть ім'я"><br><br>
 
-        <button id="game-search-btn">Інформація</button>
-    </form>
-</section>
-<section id="game-search-section">
+<header>
+    <div class="logo">
+        <a href="index.html"><strong>ROCKSTAR</strong></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="info.html">Про ігри</a></li>
+            <li><a href="quiz.html">Квіз</a></li>
+        </ul>
+    </nav>
+</header>
 
-</section>
- 
+<main>
+    <section>
+        <h2>Пошук інформації про ігри</h2>
+        <form>
+            <label for="username">Назва гри</label><br>
+            <input type="text" id="game-search-input" name="username" placeholder="Введіть назву (наприклад, GTA V)"><br><br>
+            <button id="game-search-btn">Знайти інфо</button>
+        </form>
+    </section>
+    
+    <section id="game-search-section">
+        <!-- Сюди твій JS буде виводити результат -->
+    </section>
+</main>
+
 <script type="module" src="./js/info.js"></script>
 </body>
 </html>

@@ -19,10 +19,6 @@ header {
   color: #ffcc00;
 }
 
-.mobile-menu{
-display:none
-}
-
 nav ul {
   list-style: none;
   display: flex;
@@ -39,14 +35,6 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #ffcc00;
-}
-
-.nav-link{
- color:yellow
-}
-
-.nav-link:hover{
- color:rgb(188, 188, 14)
 }
 
 .hero {
@@ -66,10 +54,6 @@ nav ul li a:hover {
   color: #ccc;
 }
 
-.content {
-  margin-top: 40px;
-}
-
 .content h2 {
   text-align: center;
   color: #00ff99;
@@ -80,6 +64,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -104,4 +89,24 @@ footer {
   padding: 15px;
   color: #888;
   margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  nav ul {
+    margin-top: 15px;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .card {
+    width: 80%;
+  }
 }
