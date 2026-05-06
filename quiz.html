@@ -26,9 +26,31 @@
 <main>
     <section class="quiz-container">
         <h1 style="text-align: center; color: #ffcc00;">Перевір свої знання Rockstar Games</h1>
+        
         <div id="quiz-content">
-            <!-- Тут буде твій тест -->
-            <p style="text-align: center;">Завантаження питань...</p>
+            
+            <div id="start-screen">
+                <p style="text-align: center;">Готовий довести, що ти справжній фанат? <br> У тебе буде 10 питань про історію та ігри компанії.</p>
+                <div style="display: flex; justify-content: center; margin-top: 20px;">
+                    <button id="start-btn" class="main-btn">ПОЧАТИ КВІЗ</button>
+                </div>
+            </div>
+
+            <div id="question-screen" style="display: none;">
+                <div class="question-box">
+                    <h2 id="question-text">Тут з'явиться питання...</h2>
+                    <div id="options-container" class="options">
+                        </div>
+                </div>
+                <button id="next-btn" style="display: none;">Наступне питання</button>
+            </div>
+
+            <div id="result-container" style="display: none;">
+                <h2>Твій результат:</h2>
+                <p id="score-text"></p>
+                <button onclick="location.reload()" class="main-btn">Спробувати ще раз</button>
+            </div>
+
         </div>
     </section>
 </main>
