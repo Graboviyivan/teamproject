@@ -25,27 +25,34 @@
 
 <main>
     <section class="quiz-container">
-        <h1 style="text-align: center; color: #ffcc00;">Перевір свої знання Rockstar Games</h1>
+        <h1 class="text1">Перевір свої знання Rockstar Games</h1>
         
-        <div id="quiz-content">
+        <div id="quiz-content" class="app-container">
             
-            <div id="start-screen">
-                <p style="text-align: center;">Готовий довести, що ти справжній фанат? <br> У тебе буде 15 питань про історію та ігри компанії.</p>
+            <div id="start-screen" class="screen">
+                <p class="text2">Готовий довести, що ти справжній фанат?<br> У тебе буде 15 питань про історію та ігри компанії.</p>
                 <div style="display: flex; justify-content: center; margin-top: 20px;">
-                    <button id="start-btn" class="main-btn">ПОЧАТИ КВІЗ</button>
+                    <select id="choicDifficult">
+          <option value="easy">easy</option>
+          <option value="medium">medium</option>
+          <option value="hard">hard</option>
+        </select>
+                    <button id="startQuiz" class="main-btn">Почати квіз</button>
                 </div>
             </div>
 
-            <div id="question-screen" style="display: none;">
-                <div class="question-box">
-                    <h2 id="question-text">Тут з'явиться питання...</h2>
+                    <div id="quiz-screen" class="screen disable hide"></div>
+                    <h2 id="questionText"></h2>
+                    <img id="questionImg" class="question-img" src="" alt="" />
                     <div id="options-container" class="options">
+                        <p id="timerText"></p>
+                        <ul id="answerList"></ul>
                         </div>
                 </div>
                 <button id="next-btn" style="display: none;">Наступне питання</button>
             </div>
 
-            <div id="result-container" style="display: none;">
+            <div id="result-screen" class="screen disable hide">
                 <h2>Твій результат:</h2>
                 <p id="score-text"></p>
                 <button onclick="location.reload()" class="main-btn">Спробувати ще раз</button>
@@ -55,6 +62,6 @@
     </section>
 </main>
 
-<script src="./js/quiz.js"></script>
+<script type="module" src="./js/quiz.js"></script>
 </body>
 </html>
