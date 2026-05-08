@@ -24,27 +24,22 @@
 </header>
 
 <main>
-    <section>
-        <h2>Пошук інформації про ігри</h2>
-        <form>
-            <label for="game-search-input">Назва гри</label><br>
-            <input type="text" id="game-search-input" name="username" list="games-list" placeholder="Введіть назву (наприклад, GTA V)">
-            <datalist id="games-list">
-            <option value="Grand Theft Auto VI">
-            <option value="Grand Theft Auto V">
-            <option value="Red Dead Redemption 2">
-            <option value="Red Dead Redemption">
-            <option value="Bully">
-            <option value="Max Payne 3">
-            <option value="L.A. Noire">
-            <option value="Manhunt">
-        </datalist>
-            <br><br>
-            <button id="game-search-btn">Знайти інфо</button>
-        </form>
+    <section class="info-hero">
+        <h2>Оберіть серію ігор</h2>
+        <p>Натисніть на картку, щоб дізнатися історію та деталі кожної франшизи Rockstar Games</p>
+    </section>
+
+    <section class="series-grid">
+        <div class="series-card" data-series="gta">Manhunt</div>
+        <div class="series-card" data-series="rdr">Red Dead</div>
+        <div class="series-card" data-series="maxpayne">Max Payne</div>
+        <div class="series-card" data-series="midnight">Midnight Club</div>
+        <div class="series-card" data-series="manhunt">GTA</div>
+        <div class="series-card" data-series="bully">Bully</div>
+        <div class="series-card" data-series="lanoire">L.A. Noire</div>
     </section>
     
-    <section id="game-search-section">
+    <section id="game-result-display" class="result-hidden">
     </section>
 </main>
 
