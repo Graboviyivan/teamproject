@@ -33,3 +33,15 @@ border-radius: 30px;
 .screen{
 text-align: center;
 }
+#startQuiz {
+  background-color: lightcoral;
+  border-radius: 15px;
+  padding: 10px 10px;
+  width: 100px;
+  white-space: nowrap;
+ 
+}
+
+.quiz-image{
+    width: 300px;
+}

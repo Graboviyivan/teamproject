@@ -142,6 +142,7 @@ function displayAnswer(answerText, correctIndex, answerIndex) {
 function displayAnswerScreen(questions) {
   answerList.innerHTML = "";
   questionImg.src = questions.imgquestion;
+  questionImg.classList.add("quiz-image");
   questionText.textContent = questions.question;
 
   questions.answers.forEach((element, index) => {
@@ -180,6 +181,8 @@ function result(num) {
   clearInterval(timerId);
   quizScreen.classList.add("disable");
   resultScreen.classList.remove("disable");
+  
+  const scoreText = document.getElementById("score-text");
   resultScreen.textContent = `${score}/${num}`;
 }
 
