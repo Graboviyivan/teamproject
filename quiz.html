@@ -24,14 +24,11 @@
 </header>
 
 <main>
-    <section class="quiz-container">
         <h1 class="text1">Перевір свої знання Rockstar Games</h1>
-        
-        <div id="quiz-content" class="app-container">
-            
+        <div class="app-container">
+             <img class="question-img" src="" alt="" />
             <div id="start-screen" class="screen">
-                <p class="text2">Готовий довести, що ти справжній фанат?<br> У тебе буде 15 питань про історію та ігри компанії.</p>
-                <div style="display: flex; justify-content: center; margin-top: 20px;">
+                <p class="main-title">Готовий довести, що ти справжній фанат?</p>
                     <select id="choicDifficult">
           <option value="easy">easy</option>
           <option value="medium">medium</option>
@@ -39,9 +36,9 @@
         </select>
                     <button id="startQuiz" class="main-btn">Почати квіз</button>
                 </div>
-            </div>
+            
 
-                    <div id="quiz-screen" class="screen disable hide"></div>
+                    <div id="quiz-screen" class="screen disable hide">
                     <h2 id="questionText"></h2>
                     <img id="questionImg" class="question-img" src="" alt="" />
                     <div id="options-container" class="options">
@@ -49,19 +46,18 @@
                         <ul id="answerList"></ul>
                         </div>
                 </div>
-                <button id="next-btn" style="display: none;">Наступне питання</button>
+                <div id="result-screen" class="screen disable hide"></div>
+                
             </div>
 
-            <div id="result-screen" class="screen disable hide">
+            <button id="next-btn" style="display: none;">Наступне питання</button>
                 <h2>Твій результат:</h2>
                 <p id="score-text"></p>
                 <button onclick="location.reload()" class="main-btn">Спробувати ще раз</button>
-            </div>
+            
 
-        </div>
-    </section>
 </main>
 
-<script type="module" src="./js/quiz.js"></script>
+<script src="./js/services/questions.js"></script>
 </body>
 </html>

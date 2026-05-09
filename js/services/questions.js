@@ -62,33 +62,33 @@ const questionsData = {
     {
       question: "У якому році вийшла перша GTA?",
       imgquestion: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTk39MFEEX97_GzE3Wu7qEQbX-ZXc6i2D50g&s",
-      answers: ["", "", "", ""],
+      answers: ["1992", "1997", "1995", "1993"],
       correct: 1,
     },
   ],
   hard: [
     {
-      question: "?",
+      question: "Як називається рушій, на якому працюють ігри Rockstar від GTA IV?",
       imgquestion: "",
-      answers: ["", "", "", ""],
+      answers: ["Unreal Engine", "Source", "RAGE", "Frostbite"],
       correct: 2,
     },
     {
-      question: "?",
+      question: "У грі Bully як звати директора школи Буллворт?",
       imgquestion: "",
-      answers: ["", "", "", ""],
+      answers: ["Містер Бертон", "Доктор Крейбблснітч", "Місіс Пібоді", "Містер Геллоуей"],
       correct: 1,
     },
     {
-      question: "?",
+      question: "Яка гра Rockstar отримала найбільшу кількість судових позовів через насильство?",
       imgquestion: "",
-      answers: ["", "", "", ""],
+      answers: ["Manhunt 2", " GTA III", "Red Dead Redemption", "Max Payne 3"],
       correct: 0,
     },
     {
-      question: "?",
+      question: "Як точно називається кінь Артура Моргана за замовчуванням ?",
       imgquestion: "",
-      answers: ["", "", "", "Е"],
+      answers: ["Буелл", "Старший брат", "Рейчел", "Боаделлія"],
       correct: 3,
     },
   ],
@@ -98,4 +98,105 @@ let time = 10;
 let curentQuestion = 0;
 let curentQuestionList = [];
 let timerId;
+
+const startScreen = document.getElementById("start-screen");
+const quizScreen = document.getElementById("quiz-screen");
+const resultScreen = document.getElementById("result-screen");
+
+const choicDifficult = document.getElementById("choicDifficult");
+const startBtn = document.getElementById("startQuiz");
+
+const questionText = document.getElementById("questionText");
+const questionImg = document.getElementById("questionImg");
+const timerText = document.getElementById("timerText");
+const answerList = document.getElementById("answerList");
+
+function displayAnswer(answerText, correctIndex, answerIndex) {
+  const answerItem = document.createElement("li");
+  const answerBtn = document.createElement("button");
+
+  answerBtn.textContent = answerText;
+  answerBtn.classList.add("answerTextStyle")
+  answerItem.append(answerBtn);
+  answerList.append(answerItem);
+
+  answerBtn.addEventListener("click", () => {
+    clearInterval(timerId);
+
+    const allButton = answerList.querySelectorAll("button");
+    allButton.forEach((btn) => (btn.disabled = true));
+
+    if (answerIndex === correctIndex) {
+      score++;
+      answerBtn.classList.add("correct");
+    } else {
+      answerBtn.classList.add("unCorrect");
+    }
+
+    setTimeout(() => {
+      nextQestion();
+    }, 500);
+  });
+}
+
+function displayAnswerScreen(questions) {
+  answerList.innerHTML = "";
+  questionImg.src = questions.imgquestion;
+  questionText.textContent = questions.question;
+
+  questions.answers.forEach((element, index) => {
+    displayAnswer(element, questions.correct, index);
+  });
+
+  startTimer();
+}
+
+function startTimer() {
+  clearInterval(timerId);
+  time = 10;
+  timerText.textContent = time;
+
+  timerId = setInterval(() => {
+    time--;
+    timerText.textContent = time;
+    if (time <= 0) {
+      nextQestion();
+    }
+  }, 1000);
+}
+
+function nextQestion() {
+  clearInterval(timerId);
+  curentQuestion++;
+
+  if (curentQuestion < curentQuestionList.length) {
+    displayAnswerScreen(curentQuestionList[curentQuestion]);
+  } else {
+    result(curentQuestionList.length);
+  }
+}
+
+function result(num) {
+  clearInterval(timerId);
+  quizScreen.classList.add("disable");
+  resultScreen.classList.remove("disable");
+  resultScreen.textContent = `${score}/${num}`;
+}
+
+function startQuiz() {
+  console.log(1);
+  curentQuestionList = questionsData[choicDifficult.value];
+  curentQuestion = 0;
+  score = 0;
+
+  startScreen.classList.add("disable");
+  quizScreen.classList.remove("disable");
+  resultScreen.classList.add("disable");
+  resultScreen.classList.add("result-text");
+
+  displayAnswerScreen(curentQuestionList[curentQuestion]);
+}
+
+startBtn.addEventListener("click", startQuiz);
+
 
