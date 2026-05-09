@@ -24,8 +24,9 @@
 </header>
 
 <main>
+    <div class="app-container">
         <h1 class="text1">Перевір свої знання Rockstar Games</h1>
-        <div class="app-container">
+        
              <img class="question-img" src="" alt="" />
             <div id="start-screen" class="screen">
                 <p class="main-title">Готовий довести, що ти справжній фанат?</p>
@@ -41,7 +42,6 @@
                     <div id="quiz-screen" class="screen disable hide">
                     <h2 id="questionText"></h2>
                     <img id="questionImg" class="question-img" src="" alt="" />
-                    <div id="options-container" class="options">
                         <p id="timerText"></p>
                         <ul id="answerList"></ul>
                         </div>
@@ -50,10 +50,7 @@
                 
             </div>
 
-            <button id="next-btn" style="display: none;">Наступне питання</button>
-                <h2>Твій результат:</h2>
-                <p id="score-text"></p>
-                <button onclick="location.reload()" class="main-btn">Спробувати ще раз</button>
+                <button onclick="location.reload()" id="reloadBtn">Спробувати ще раз</button>
             
 
 </main>

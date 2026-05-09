@@ -110,6 +110,7 @@ const questionText = document.getElementById("questionText");
 const questionImg = document.getElementById("questionImg");
 const timerText = document.getElementById("timerText");
 const answerList = document.getElementById("answerList");
+const reloadBtn = document.getElementById("reloadBtn")
 
 function displayAnswer(answerText, correctIndex, answerIndex) {
   const answerItem = document.createElement("li");
@@ -183,7 +184,8 @@ function result(num) {
   resultScreen.classList.remove("disable");
   
   const scoreText = document.getElementById("score-text");
-  resultScreen.textContent = `${score}/${num}`;
+  resultScreen.textContent = `Правильні відповаіді : ${score} із ${num}`;
+  resultScreen.classList.add("resultText")
 }
 
 function startQuiz() {

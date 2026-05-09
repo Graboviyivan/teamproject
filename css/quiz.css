@@ -13,12 +13,13 @@ body{
     margin-right: 50px;
     font-size:20px;
     border-radius: 10px;
+    font-family: cursive;
 }
 .main-title{
 text-align: center;
 border:2px solid black;
 background-color: white;
-font-family: sans-serif;
+font-family: cursive;
 font-size: 15px;
 padding: 10px;
 margin-left:650px;
@@ -28,7 +29,7 @@ border-radius: 30px;
 .text1{
    text-align: center;
  color: black;
- font-family: sans-serif;
+ font-family: cursive;
 }
 .screen{
 text-align: center;
@@ -36,12 +37,63 @@ text-align: center;
 #startQuiz {
   background-color: lightcoral;
   border-radius: 15px;
-  padding: 10px 10px;
-  width: 100px;
+  width: 150px;
   white-space: nowrap;
+  font-family: cursive;
+  font-size: 20px;
  
+}
+
+#startQuiz:hover{
+  background-color: rgb(223, 167, 167);
+  border-radius: 15px;
+  width: 150px;
+  white-space: nowrap;
+  font-family: cursive;
+  font-size: 20px;
 }
 
 .quiz-image{
     width: 300px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.correct {
+  background-color: rgb(0, 200, 0);
+  border-radius: 20px;
+}
+
+.unCorrect {
+  background-color: red;
+  border-radius: 20px;
+}
+
+.disable {
+  display: none;
+}
+
+.answerTextStyle{
+    color: black;
+    border-radius: 20px;
+    border:1px solid black;
+    
+}
+
+.resultText{
+    color: white;
+    font-size: 40px;
+    font-family: cursive;
+}
+
+#answerList{
+    list-style: none;
+}
+
+#reloadBtn{
+    font-family: cursive;
+}
+
+#questionText{
+    font-family: cursive;
 }
