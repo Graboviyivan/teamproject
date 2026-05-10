@@ -1,99 +1,114 @@
-body{
-    background-image: url("https://images7.alphacoders.com/576/thumb-1920-576754.jpg");
+/* Основний фон з затемненням, щоб текст не губився */
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+    url("https://images7.alphacoders.com/576/thumb-1920-576754.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.main-btn{
-    margin-top: 100px;
-    border-radius: 10px;
-}
-#choicDifficult{
-    margin-top:100px;
-    margin-right: 50px;
-    font-size:20px;
-    border-radius: 10px;
-    font-family: cursive;
-}
-.main-title{
-text-align: center;
-border:2px solid black;
-background-color: white;
-font-family: cursive;
-font-size: 15px;
-padding: 10px;
-margin-left:650px;
-margin-right:650px;
-border-radius: 30px;
-}
-.text1{
-   text-align: center;
- color: black;
- font-family: cursive;
-}
-.screen{
-text-align: center;
-}
-#startQuiz {
-  background-color: lightcoral;
-  border-radius: 15px;
-  width: 150px;
-  white-space: nowrap;
-  font-family: cursive;
-  font-size: 20px;
- 
-}
-
-#startQuiz:hover{
-  background-color: rgb(223, 167, 167);
-  border-radius: 15px;
-  width: 150px;
-  white-space: nowrap;
-  font-family: cursive;
-  font-size: 20px;
-}
-
-.quiz-image{
-    width: 300px;
-    border: 2px solid black;
-    border-radius: 30px;
-}
-
-.correct {
-  background-color: rgb(0, 200, 0);
-  border-radius: 20px;
-}
-
-.unCorrect {
-  background-color: red;
-  border-radius: 20px;
-}
-
-.disable {
-  display: none;
-}
-
-.answerTextStyle{
-    color: black;
-    border-radius: 20px;
-    border:1px solid black;
-    
-}
-
-.resultText{
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Поміняв на більш строгий стиль */
     color: white;
-    font-size: 40px;
-    font-family: cursive;
+    margin: 0;
 }
 
-#answerList{
+.app-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.text1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #ffcc00; /* Жовтий акцент Rockstar */
+    margin-bottom: 40px;
+}
+
+.main-title {
+    background-color: white;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-block; /* Щоб блок не розтягувався на всю ширину */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Контейнер для кнопок вибору */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+#choicDifficult {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.main-btn {
+    background-color: lightcoral;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background-color: #e57373;
+    transform: scale(1.05);
+}
+
+/* Стиль картинок у квізі */
+.quiz-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 4px solid #ffcc00;
+    border-radius: 20px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* Список відповідей */
+#answerList {
     list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Робимо відповіді у два стовпчики */
+    gap: 15px;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
-#reloadBtn{
-    font-family: cursive;
+.answerTextStyle {
+    padding: 15px;
+    background: white;
+    color: black;
+    border: 2px solid #333;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-#questionText{
-    font-family: cursive;
+.answerTextStyle:hover {
+    background-color: #eee;
+}
+
+/* Статуси відповідей (для JS) */
+.correct { background-color: #2ecc71 !important; color: white; }
+.unCorrect { background-color: #e74c3c !important; color: white; }
+
+.disable { display: none; }
+
+.resultText {
+    font-size: 40px;
+    margin-bottom: 30px;
 }

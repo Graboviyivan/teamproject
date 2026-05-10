@@ -27,34 +27,32 @@
     <div class="app-container">
         <h1 class="text1">Перевір свої знання Rockstar Games</h1>
         
-             <img class="question-img" src="" alt="" />
-            <div id="start-screen" class="screen">
-                <p class="main-title">Готовий довести, що ти справжній фанат?</p>
-                    <select id="choicDifficult">
-          <option value="easy">easy</option>
-          <option value="medium">medium</option>
-          <option value="hard">hard</option>
-        </select>
-                    <button id="startQuiz" class="main-btn">Почати квіз</button>
-                </div>
-            
-
-                    <div id="quiz-screen" class="screen disable hide">
-                    <h2 id="questionText"></h2>
-                    <img id="questionImg" class="question-img" src="" alt="" />
-                        <p id="timerText"></p>
-                        <ul id="answerList"></ul>
-                        </div>
-                </div>
-                <div id="result-screen" class="screen disable hide"></div>
-                
+        <div id="start-screen" class="screen">
+            <p class="main-title">Готовий довести, що ти справжній фанат?</p>
+            <div class="controls">
+                <select id="choicDifficult">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button id="startQuiz" class="main-btn">Почати квіз</button>
             </div>
+        </div>
 
-                <button onclick="location.reload()" id="reloadBtn">Спробувати ще раз</button>
-            
+        <div id="quiz-screen" class="screen disable">
+            <h2 id="questionText"></h2>
+            <img id="questionImg" class="quiz-image" src="" alt="Game Image" />
+            <p id="timerText"></p>
+            <ul id="answerList"></ul>
+        </div>
 
+        <div id="result-screen" class="screen disable">
+            <h2 id="score-text" class="resultText"></h2>
+            <button onclick="location.reload()" id="reloadBtn" class="main-btn">Спробувати ще раз</button>
+        </div>
+    </div>
 </main>
 
-<script type="module" src="./js/services/questions.js"></script>
+<script src="./js/services/questions.js"></script>
 </body>
 </html>
