@@ -20,7 +20,7 @@ body {
 .text1 {
     font-size: 36px;
     text-transform: uppercase;
-    color: #ffcc00; /* Жовтий акцент Rockstar */
+    color: #ffcc00;
     margin-bottom: 40px;
 }
 
@@ -29,12 +29,12 @@ body {
     color: black;
     padding: 15px 30px;
     border-radius: 50px;
-    display: inline-block; /* Щоб блок не розтягувався на всю ширину */
+    display: inline-block;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-/* Контейнер для кнопок вибору */
+
 .controls {
     display: flex;
     justify-content: center;
@@ -65,7 +65,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Стиль картинок у квізі */
 .quiz-image {
     width: 100%;
     max-width: 500px;
@@ -76,12 +75,11 @@ body {
     display: block;
 }
 
-/* Список відповідей */
 #answerList {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Робимо відповіді у два стовпчики */
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
     max-width: 600px;
     margin: 20px auto;
@@ -102,7 +100,6 @@ body {
     background-color: #eee;
 }
 
-/* Статуси відповідей (для JS) */
 .correct { background-color: #2ecc71 !important; color: white; }
 .unCorrect { background-color: #e74c3c !important; color: white; }
 
