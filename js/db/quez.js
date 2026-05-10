@@ -75,19 +75,19 @@ export const questionsData = {
     },
     {
       question: "У грі Bully як звати директора школи Буллворт?",
-      imgquestion: "",
+      imgquestion: "https://static.wikia.nocookie.net/thevideogamedatabase/images/9/97/929637-dr._crabblesnitch_large.jpg/revision/latest/scale-to-width-down/284?cb=20121204050638",
       answers: ["Містер Бертон", "Доктор Крейбблснітч", "Місіс Пібоді", "Містер Геллоуей"],
       correct: 1,
     },
     {
       question: "Яка гра Rockstar отримала найбільшу кількість судових позовів через насильство?",
-      imgquestion: "",
+      imgquestion: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXTKUG0Z1SP-FTBIo5EULVg32AgV7GWhGA3A&s",
       answers: ["Manhunt 2", " GTA III", "Red Dead Redemption", "Max Payne 3"],
       correct: 0,
     },
     {
       question: "Як точно називається кінь Артура Моргана за замовчуванням ?",
-      imgquestion: "",
+      imgquestion: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsQGPcY0QU5lacxmkLfSA165K__Eh3-HI7hQ&s",
       answers: ["Буелл", "Старший брат", "Рейчел", "Боаделлія"],
       correct: 3,
     },
